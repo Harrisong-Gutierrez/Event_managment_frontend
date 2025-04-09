@@ -60,3 +60,18 @@ export const deleteSponsor = async (sponsorId) => {
   });
 };
 
+
+// Participant 
+
+
+export const fetchParticipant = async () => {
+  const response = await fetch(`${API_URL}/Participant`);
+  return response.json();
+};
+
+export const deleteParticipant = async (participantId) => {
+  await fetch(`${API_URL}/Participant/${participantId}`, { 
+    method: 'DELETE' 
+  });
+}
+

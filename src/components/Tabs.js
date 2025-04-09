@@ -7,6 +7,7 @@ import OrganizerList from './Organaizer/OrganizerList';
 import OrganaizerForm from './Organaizer/OrganaizerForm';
 import SponsorList from './Sponsor/SponsorList';
 import SponsorForm from './Sponsor/SponsorForm';
+import ParticipantList from './Participant/ParticipantList';
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState('events');
@@ -41,7 +42,7 @@ export default function Tabs() {
         </div>
 
         <div className={`tab-pane ${activeTab === 'participants' ? 'show active' : 'd-none'}`}>
-          <h3>Participant List</h3>
+          <ParticipantList />
         </div>
 
         <div className={`tab-pane ${activeTab === 'organizers' ? 'show active' : 'd-none'}`}>

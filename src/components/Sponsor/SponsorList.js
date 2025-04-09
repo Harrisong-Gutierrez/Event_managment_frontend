@@ -19,7 +19,7 @@ export default function SponsorList() {
 
 
     const handleDelete = async (sponsorId) => {
-        if (confirm("¿Eliminar organizador?")) {
+        if (confirm("¿Eliminar Sponsor?")) {
             try {
                 await deleteSponsor(sponsorId);
                 loadSponsors();
