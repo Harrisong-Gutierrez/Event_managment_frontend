@@ -1,5 +1,5 @@
 import { createOrganizer } from "@/services/api";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 
 export default function OrganaizerForm({ onOrganaizerCreated }) {
@@ -89,5 +89,4 @@ export default function OrganaizerForm({ onOrganaizerCreated }) {
             </div>
         </div>
     );
-
 };

@@ -8,6 +8,7 @@ import OrganaizerForm from './Organaizer/OrganaizerForm';
 import SponsorList from './Sponsor/SponsorList';
 import SponsorForm from './Sponsor/SponsorForm';
 import ParticipantList from './Participant/ParticipantList';
+import ParticipantForm from './Participant/ParticipantForm';
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState('events');
@@ -42,6 +43,7 @@ export default function Tabs() {
         </div>
 
         <div className={`tab-pane ${activeTab === 'participants' ? 'show active' : 'd-none'}`}>
+          <ParticipantForm  onParticipantFormCreated={() => window.location.reload()} />
           <ParticipantList />
         </div>
 
