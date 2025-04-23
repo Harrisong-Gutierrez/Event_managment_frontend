@@ -38,7 +38,6 @@ export const deleteOrganizers = async (organizerId) => {
 };
 
 // Sponsor
-
 export const fetchSponsor = async () => {
   const  response = await fetch(`${API_URL}/Sponsor`);
   return response.json();
@@ -58,8 +57,6 @@ export const deleteSponsor = async (sponsorId) => {
 
 
 // Participant 
-
-
 export const fetchParticipant = async () => {
   const response = await fetch(`${API_URL}/Participant`);
   return response.json();
@@ -77,3 +74,27 @@ export const deleteParticipant = async (participantId) => {
   });
 };
 
+
+// Rejistrations
+
+export const fetchRegistration = async () => {
+  const response = await fetch(`${API_URL}/Registration`);
+  return response.json();
+};
+
+
+export const createRegistrations = async (registrationData) => {
+  const response = await fetch(`${API_URL}/Registration`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(registrationData)
+  });
+};
+
+export const deleteRegistrations = async (registrationId) => {
+  await fetch(`${API_URL}/Registration/${registrationId}`, { 
+    method: 'DELETE' 
+  });
+};
+
+ 

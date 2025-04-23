@@ -9,6 +9,8 @@ import SponsorList from './Sponsor/SponsorList';
 import SponsorForm from './Sponsor/SponsorForm';
 import ParticipantList from './Participant/ParticipantList';
 import ParticipantForm from './Participant/ParticipantForm';
+import RegistrationList from './Registration/RegistrationList';
+import RegistrationForm from './Registration/RegistrationForm';
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState('events');
@@ -58,7 +60,8 @@ export default function Tabs() {
         </div>
 
         <div className={`tab-pane ${activeTab === 'registrations' ? 'show active' : 'd-none'}`}>
-          <h3>Registration List</h3>
+         <RegistrationForm onRegistrationFormCreated={() => window.location.reload()} />
+         <RegistrationList />
         </div>
       </div>
     </div>
