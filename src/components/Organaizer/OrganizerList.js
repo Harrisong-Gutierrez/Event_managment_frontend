@@ -9,7 +9,7 @@ export default function OrganizerList() {
 
   const loadOrganizers = async () => {
     try {
-      const data = await fetchOrganizers(); 
+      const data = await fetchOrganizers();
       setOrganizers(data);
     } catch (err) {
       setError(err.message);
@@ -22,7 +22,7 @@ export default function OrganizerList() {
     if (confirm("¿Eliminar organizador?")) {
       try {
         await deleteOrganizers(organizerId);
-        loadOrganizers(); 
+        loadOrganizers();
       } catch (err) {
         setError(err.message);
       }
@@ -48,7 +48,7 @@ export default function OrganizerList() {
                   <li><strong>Email:</strong> {organizer.email}</li>
                   <li><strong>Phone:</strong> {organizer.phone}</li>
                 </ul>
-                <button 
+                <button
                   onClick={() => handleDelete(organizer.organizerId)}
                   className="btn btn-danger btn-sm"
                 >
