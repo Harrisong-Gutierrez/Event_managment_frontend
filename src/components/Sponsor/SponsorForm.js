@@ -1,4 +1,4 @@
-import { createOrganizer, fetchEvents } from "@/services/api";
+import {  createSponsor, fetchEvents } from "@/services/api";
 import { useEffect, useState } from "react";
 
 export default function SponsorForm({ onSponsorCreated }) {
@@ -41,7 +41,7 @@ export default function SponsorForm({ onSponsorCreated }) {
                 description: formData.description,
                 eventId: selectedEventId,
             }
-            await createOrganizer(apiData);
+            await createSponsor(apiData);
 
             onSponsorCreated();
 
@@ -111,7 +111,7 @@ export default function SponsorForm({ onSponsorCreated }) {
 
                         <div className="col-12">
                             <button type="submit" className="btn btn-primary">
-                                Create Event
+                                Create Sponsor
                             </button>
                         </div>
                     </div>
