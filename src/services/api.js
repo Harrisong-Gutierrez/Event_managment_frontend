@@ -43,7 +43,7 @@ export const fetchSponsor = async () => {
   return response.json();
 };
 export const createSponsor = async(sponsorData) => {
-  const response = await fetch(`${API_URL}/Spopnsor`, {
+  const response = await fetch(`${API_URL}/Sponsor`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(sponsorData)
