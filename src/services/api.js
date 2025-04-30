@@ -1,4 +1,4 @@
-const API_URL = 'https://localhost:7239/api'; 
+const API_URL = 'https://harrisongeventmanagement.somee.com/api'; 
 
 
 

@@ -130,7 +130,9 @@ export default function RegistrationForm({ onRegistrationFormCreated }) {
                                         {event.name}
                                     </option>
                                 ))}
-                            </select>
+                            </select>  
+
+                             
                         </div>
 
 
