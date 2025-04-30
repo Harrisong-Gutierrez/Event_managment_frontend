@@ -81,7 +81,7 @@ export default function OrganaizerForm({ onOrganaizerCreated }) {
 
                         <div className="col-12">
                             <button type="submit" className="btn btn-primary">
-                                Create Event
+                                Create Organizer
                             </button>
                         </div>
                     </div>
