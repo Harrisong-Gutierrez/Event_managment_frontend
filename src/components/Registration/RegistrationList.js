@@ -3,7 +3,7 @@ import { deleteRegistrations, fetchRegistration } from '@/services/api';
 import { useEffect, useState } from 'react';
 
 
-export default function () {
+const RegistrationList  = ()  => {
     const [registrations, setRegistration] = useState([]);
     const [error, setError] = useState(null);
 
@@ -60,4 +60,7 @@ export default function () {
     );
 
 
-}
+};
+
+
+export default RegistrationList;
